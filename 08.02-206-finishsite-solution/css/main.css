@@ -14,7 +14,6 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
-    font-family: 'Roboto Mono', monospace;
 }
 
 /*
@@ -96,110 +95,71 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*Large Background Image*/
 html {
-  background-color: black;
+  background-color: #222;
   height: 100%;
   width: 100%;
 }
 
 body {
-  padding: 0 2em;
-  font-size: 1.3em;
-  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0em 2em;
+  font-size: 1.25em;
   color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+p span {
+  font-family: 'Lora', sans-serif;
 }
 
 header,
 footer {
-  /* height: 80px; */
-  padding: 30px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5em;
-}
-
-main {
-  /* height: 250px; */
-  width: 100%;
-  padding: 30px;
-}
-
-header,
-main {
-  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+}
+
+header h1 {
+  font-family: 'Lora', sans-serif;
+  font-size: 3em;
 }
 
 main {
-  border-bottom: 1px solid grey;
-}
-
-footer {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  border-top: 1px solid grey;
+  border-bottom: 1px solid #fff;
 }
 
-#div-1,
-#div-2,
-#div-3 {
-  text-align: center;
+main p {
+  font-size: 1.35em;
+}
+
+.flex-items {
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 1.5em;
   font-size: 1em;
-  height: inherit;
+  border-bottom: 1px solid #555;
 }
 
-#div-1, #div-2 {
-  width: 24%;
+footer {
+  border-top: 1px solid #fff;
 }
 
-#div-3 {
-  width: 50%;
-}
-
-#div-2 p {
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
-}
-
-.wrapper span {
-  font-family: 'Lora', sans-serif;
-  font-size: 1.3em;
-}
-
-.flex-container {
-  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center, and set flex-flow to row wrap*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  justify-content:space-between;
-}
-
-.flex-items {
-  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
-  line-height: 1.5em;
-  font-size: 1.6em;
-  /* height: 200px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-p {
-  padding: 1em;
-}
-
-a {
-  color: grey;
+footer i {
+  padding: 30px 20px 0 0;
 }
 
 /* ==========================================================================
@@ -289,14 +249,16 @@ a {
 }
 
 @media (min-width: 1200px) {
-  #div-1,
-  #div-2{
-      /* set your flex value to 1 50% */
-  }
+    .flex-items {
+      flex-basis: 30%;
+      border-bottom: none;
+    }
 
-  #div-3 {
-    /* set your flex value to 1 100% */
-  }
+    #div-2 p {
+      border-left: 1px solid #555;
+      border-right: 1px solid #555;
+      padding: 0 40px;
+    }
 }
 
 @media print,
